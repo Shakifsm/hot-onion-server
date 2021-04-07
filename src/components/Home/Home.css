@@ -1,0 +1,48 @@
+.search{
+    background-image: url(../../Images/bannerbackground.png);
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.search h1{
+    padding-top: 160px;
+   padding-bottom: 20px;
+}
+
+.search-box{
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding-left: 20px;
+    width: 350px;
+    height: 45px;
+    outline: none;
+}
+
+.search-btn{
+    border: none;
+    border-radius: 15px;
+    background-color: #F91944;
+    color: white;
+    height: 40px;
+    width: 150px;
+    margin-left: -50px;
+    outline: none;
+}
+
+.tab-section{
+    height: 500px;
+    margin-top: 50px;
+}
+
+/* .tabs{
+    margin-left: 500px
+} */
+
+.tab-bar{
+    text-align: center;
+}

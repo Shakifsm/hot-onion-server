@@ -1,0 +1,39 @@
+.parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo img{
+    width: 30%;
+}
+
+li{
+    list-style: none;
+    display: inline;
+    margin-right: 30px;
+}
+
+li a{
+    color: black;
+    font-size: 20px;
+}
+
+li a:hover{
+    color: #F91944;
+    text-decoration: none;
+}
+
+li button{
+    background-color: #F91944;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+li button:hover{
+    color: #F91944;
+    background-color: white;
+}
