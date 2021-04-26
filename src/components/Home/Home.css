@@ -46,3 +46,8 @@
 .tab-bar{
     text-align: center;
 }
+
+.foods:hover{
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}

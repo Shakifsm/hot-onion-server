@@ -31,12 +31,12 @@ const Home = () => {
             </section>
             <section className="tab-section container">
                 <div className="tabs">
-                    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                        <Tab  className="tab-bar" eventKey="home" title="Breakfast">
+                    <Tabs className=' mt-4 justify-content-center' defaultActiveKey="profile" id="uncontrolled-tab-example">
+                        <Tab  className="tab-bar p-3" eventKey="home" title="Breakfast">
                             <div className="row mt-5"  style={{ width: '100%' }}>
                                 {
                                     breakfast.map(brk =>
-                                        <div className="col-md-4 p-4">
+                                        <div className="col-md-4 p-4 foods">
                                             <Breakfast brk={brk} ></Breakfast>
                                         </div>
                                         )
@@ -47,7 +47,7 @@ const Home = () => {
                         <div className="row mt-5"  style={{ width: '100%' }}>
                                 {
                                     lunch.map(lnch =>
-                                        <div className="col-md-4 p-4">
+                                        <div className="col-md-4 p-4 foods">
                                             <Lunch lnch={lnch} ></Lunch>
                                         </div>
                                         )
@@ -58,7 +58,7 @@ const Home = () => {
                         <div className="row mt-5"  style={{ width: '100%' }}>
                                 {
                                     dinner.map(dnr =>
-                                        <div className="col-md-4 p-4">
+                                        <div className="col-md-4 p-4 foods">
                                             <Dinner dnr={dnr} ></Dinner>
                                         </div>
                                         )

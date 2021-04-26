@@ -1,0 +1,22 @@
+.detail-parent {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-top: 50px;
+}
+
+.detail-description{
+    width: 70%;
+    padding: 50px;
+}
+
+.detail-img img{
+    width: 70%;
+}
+
+.plus-minus-btn{
+    background-color: #F91944;
+    border: none;
+    padding: 5px 12px;
+    color: white;
+}

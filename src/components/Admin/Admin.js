@@ -57,7 +57,7 @@ const Admin = () => {
                     <option value="lunch">Lunch</option>
                     <option value="dinner">Dinner</option>
                 </select>
-                <input type="text" placeholder="price" {...register("price")} />
+                <input type="number" placeholder="price" {...register("price")} />
                 <input placeholder="Short Description" {...register("shortDescription")} />
                 <input placeholder="Long Description" {...register("longDescription")} />
                 <input type="file" onChange={handleImageUpload} />

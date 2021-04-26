@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,14 +6,23 @@ import {
   Link
 } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
+import FoodDetails from "./components/FoodDetails/FoodDetails";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import Signup from "./components/Signup/Signup";
+import Checkout from "./components/Checkout/Checkout"
+
+
+export const CartContext = createContext();
 
 function App() {
+
+    const [cart, setCart] = useState([])
+
   return (
+      <CartContext.Provider value={[cart, setCart]}>
     <Router>
         <Header></Header>
         <Switch>
@@ -22,6 +31,12 @@ function App() {
             </Route>
             <Route path="/admin">
                 <Admin></Admin>
+            </Route>
+            <Route path="/food/:foodId">
+                <FoodDetails></FoodDetails>
+            </Route>
+            <Route path="/checkout">
+                <Checkout></Checkout>
             </Route>
             <Route path="/login">
                 <Login></Login>
@@ -37,6 +52,7 @@ function App() {
             </Route>
         </Switch>
     </Router>
+    </CartContext.Provider>
   );
 }
 
