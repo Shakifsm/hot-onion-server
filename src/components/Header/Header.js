@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import './Header.css';
 import Logo from "../../Images/logo2.png"
 import { Link } from 'react-router-dom';
-import { Button } from 'bootstrap';
 import cartLogo from '../../Images/ICON/Path 1.png'
 import { CartContext } from '../../App';
 
@@ -12,7 +11,7 @@ const Header = () => {
 
     const [cart]=useContext(CartContext);
 
-    const totalFood=cart.reduce((sum,newItem)=>sum+newItem.count,0)
+    // const totalFood=cart.reduce((sum,newItem)=>sum+newItem.count,0)
 
     return (
         <div className="parent">
@@ -26,7 +25,7 @@ const Header = () => {
                         <li>
                             <Link to="/checkout">
                                 <button className="cart-btn" variant="transparent m-0 p-0">
-                                    <h6 className='m-0 p-0'>{totalFood}</h6>
+                                    <h6 className='m-0 p-0'>{cart.length}</h6>
                                     <img src={cartLogo} alt="" />
                                 </button>
                             </Link>

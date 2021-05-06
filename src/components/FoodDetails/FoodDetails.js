@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { set } from 'react-hook-form';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../App';
@@ -19,7 +18,7 @@ const FoodDetails = () => {
 
     const newItem = selectedFoods.find(food => food._id === foodId);
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
 
     const handleIncrase = () => {
         setCount(count + 1)
@@ -73,7 +72,7 @@ const FoodDetails = () => {
                 </div>
                 <br /><br />
                 <Link to="/"><button className='mt-3 mr-3'>Back</button></Link>
-                <button disabled={disabled} onClick={() => addToCart(newItem.foodName)} className='mt-3 ml-3'>{disabled ? "Added" : "Add"}</button>
+                <button disabled={disabled} onClick={addToCart} className='mt-3 ml-3'>{disabled ? "Added" : "Add"}</button>
             </div>
             <div className="detail-img">
                 <img src={newItem?.imageURL} alt="" />

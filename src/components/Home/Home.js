@@ -5,6 +5,8 @@ import Breakfast from '../Breakfast/Breakfast';
 import Dinner from '../Dinner/Dinner';
 import Lunch from '../Lunch/Lunch';
 import './Home.css'
+import WhyUS from "../../components/WhyUS/WhyUS"
+import Footer from "../Footer/Footer"
 
 const Home = () => {
 
@@ -69,6 +71,10 @@ const Home = () => {
                 </div>
 
             </section>
+
+            <WhyUS></WhyUS>
+            <Footer></Footer>
+
         </div>
     );
 };

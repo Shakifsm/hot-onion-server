@@ -17,7 +17,7 @@ const Checkout = () => {
         setCart(newFood);
     }
 
-  
+
 
 
     return (
