@@ -11,7 +11,7 @@ const FoodDetails = () => {
     const [cart, setCart] = useContext(CartContext)
 
     useEffect(() => {
-        fetch('http://localhost:5000/allFood')
+        fetch('https://aqueous-sands-65557.herokuapp.com/allFood')
             .then(res => res.json())
             .then(data => setSelectedFoods(data))
     }, [])

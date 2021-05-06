@@ -19,7 +19,7 @@ const Admin = () => {
             imageURL: imageURL
         }
 
-        const url = 'http://localhost:5000/addFood'
+        const url = 'https://aqueous-sands-65557.herokuapp.com/addFood'
         fetch(url, {
             method: 'POST',
             headers: {
