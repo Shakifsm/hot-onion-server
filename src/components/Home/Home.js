@@ -19,7 +19,7 @@ const Home = () => {
     }, [])
 
     const breakfast = foods.filter(food => food.type === "breakfast");
-    
+
     const lunch = foods.filter(food => food.type === "lunch");
 
     const dinner = foods.filter(food => food.type === "dinner");
@@ -34,36 +34,42 @@ const Home = () => {
             <section className="tab-section container">
                 <div className="tabs">
                     <Tabs className=' mt-4 justify-content-center' defaultActiveKey="profile" id="uncontrolled-tab-example">
-                        <Tab  className="tab-bar p-3" eventKey="home" title="Breakfast">
-                            <div className="row mt-5"  style={{ width: '100%' }}>
+                        <Tab className="tab-bar p-3" eventKey="home" title="Breakfast">
+                            <div className="row mt-5" style={{ width: '100%' }}>
+                                
                                 {
                                     breakfast.map(brk =>
                                         <div className="col-md-4 p-4 foods">
                                             <Breakfast brk={brk} ></Breakfast>
                                         </div>
-                                        )
+                                    )
                                 }
                             </div>
                         </Tab>
                         <Tab className="tab-bar" eventKey="profile" title="Lunch">
-                        <div className="row mt-5"  style={{ width: '100%' }}>
+                            <div className="row mt-5" style={{ width: '100%' }}>
+                            {
+                                    lunch.length === 0 && <div class="spinner-border text-info" style={{ margin: '150px auto' }} role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                }
                                 {
                                     lunch.map(lnch =>
                                         <div className="col-md-4 p-4 foods">
                                             <Lunch lnch={lnch} ></Lunch>
                                         </div>
-                                        )
+                                    )
                                 }
                             </div>
                         </Tab>
                         <Tab className="tab-bar" eventKey="contact" title="Dinner">
-                        <div className="row mt-5"  style={{ width: '100%' }}>
+                            <div className="row mt-5" style={{ width: '100%' }}>
                                 {
                                     dinner.map(dnr =>
                                         <div className="col-md-4 p-4 foods">
                                             <Dinner dnr={dnr} ></Dinner>
                                         </div>
-                                        )
+                                    )
                                 }
                             </div>
                         </Tab>

@@ -43,7 +43,7 @@ const OrderComplete = () => {
 
                             </Col>
                             <Col md={9}>
-                                <h3>{loggedInUser.userName}</h3>
+                                <h3>Hamim</h3>
                                 <p style={{ color: 'gray' }}>Your Raider</p>
                             </Col>
 
